@@ -2,6 +2,12 @@
 
 Automatically locks your desktop when your phone moves out of Bluetooth range.
 
+## ⚠️ IMPORTANT WARNING
+
+**Please test this CLI application on virtual machines first before using it on your actual system.**
+
+As we are constantly improving this app and reducing issues, we strongly recommend testing it in a safe environment (like a virtual machine) to ensure it works as expected with your specific setup. Only proceed to use it on your actual system once you feel confident and safe with its behavior.
+
 ## Requirements
 - Python 3.8 or newer
 - A working Bluetooth adapter on the host machine
@@ -11,33 +17,59 @@ Automatically locks your desktop when your phone moves out of Bluetooth range.
   - Linux: GNOME `gnome-screensaver` or other lock commands
 
 ## Installation
-1. Open a terminal or PowerShell in the project directory.
-2. (Optional) Create and activate a virtual environment:
 
-```powershell
-python -m venv .venv; .\.venv\Scripts\Activate.ps1
+### Prerequisites
+- Python 3.8 or newer
+
+### Install the application
+
+```bash
+pip install pybluez
+pip install proximity-lock-system
 ```
 
-3. Install dependencies from `requirements.txt`:
+Note: On Windows, requirements.txt references pybluez and a 
+Windows-friendly pybluez-win10 option. If you have trouble installing 
+the library from PyPI, consider installing from the project's GitHub or 
+using the pybluez-win10 wheel.
 
-```powershell
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+### Setup and start the service
+
+```bash
+proximity-lock setup
+proximity-lock start
 ```
 
-Note: On Windows, `requirements.txt` references `pybluez` and a Windows-friendly `pybluez-win10` option. If you have trouble installing the library from PyPI, consider installing from the project's GitHub or using the `pybluez-win10` wheel.
+### Stop the service
+Press `Ctrl + C` to stop the monitoring service.
 
 ## Usage
-After installation, run the CLI to set up monitoring:
 
-```powershell
-# From project root
-python -m proximity_lock_system.cli
-# or (if installed via setup.py) use the console script
+### Running the application
+
+```bash
 proximity-lock
 ```
 
-The CLI will scan for nearby Bluetooth devices and prompt you to choose your phone. Once selected, it will monitor the device and lock the system when the phone has been out of range for the configured threshold.
+### Example output
+The CLI will scan for nearby Bluetooth devices and prompt you to choose your phone:
+
+```
+🔍 Scanning for nearby Bluetooth devices...
+Available devices:
+[0] Akarsh's iPhone (D8:B0:53:4F:8F:8F)
+Enter the number of your phone: 0
+
+📡 Monitoring device: D8:B0:53:4F:8F:8F
+✅ Device in range.
+✅ Device in range.
+⚠️ Device not found (1/2)
+⚠️ Device not found (2/2)
+🔒 System locked due to phone out of range.
+⏸️ Pausing checks for 3 minutes after lock...
+```
+
+Once selected, it will monitor the device and lock the system when the phone has been out of range for the configured threshold.
 
 ## Platform notes
 - Windows: The tool uses `rundll32.exe user32.dll,LockWorkStation` to lock the session. No extra packages are required.
