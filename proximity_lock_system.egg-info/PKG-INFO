@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: proximity-lock-system
+Version: 0.1.0
+Summary: A CLI tool that automatically locks or sleeps your laptop when your phone goes out of Bluetooth range.
+Home-page: https://github.com/Akarshjha03/ProximityLockSystem
+Author: Akarsh Jha
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pybluez

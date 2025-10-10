@@ -1,0 +1,6 @@
+# requirements.txt
+# Use GitHub source to avoid broken PyPI package
+git+https://github.com/pybluez/pybluez.git
+
+#(Windows-safe):
+pybluez-win10

@@ -1,0 +1,2 @@
+[console_scripts]
+proximity-lock = proximity_lock_system.cli:main
