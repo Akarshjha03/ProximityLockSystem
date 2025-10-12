@@ -2,6 +2,13 @@
 
 Automatically locks your desktop when your phone moves out of Bluetooth range.
 
+<p align="center">
+  <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-proximity-lock-system" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1025039&theme=light&t=1760286232175" alt="Proximity Lock System - Never worry about leaving your computer unlocked again | Product Hunt" width="250" height="54" />
+  </a>
+</p>
+
+
 ## ⚠️ IMPORTANT WARNING
 
 **Please test this CLI application on virtual machines first before using it on your actual system.**
