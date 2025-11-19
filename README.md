@@ -10,10 +10,6 @@ Automatically locks your desktop when your phone moves out of Bluetooth range.
   <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-14%20190514.png" width="1000" />
 </p>
 
-
-
-
-
 ## ⚠️ IMPORTANT WARNING
 
 **Please test this CLI application on virtual machines first before using it on your actual system.**
@@ -99,6 +95,13 @@ Tweak the constants in `proximity_lock_system/config.py`:
 - No devices found: ensure your phone's Bluetooth is turned on and discoverable.
 - Permission/adapter errors: ensure the OS user has permission to access Bluetooth and that the adapter is enabled.
 - Lock not working on Linux/macOS: the project uses a DE-specific command; update `proximity_lock_system/core.py` to call a command available on your system.
+
+## Support us by following us on Product Hunt
+<p align="center">
+  <a href="https://www.producthunt.com/products/proximity-lock-system?launch=proximity-lock-system-2-0" target="_blank">
+    <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-19%20220056.png" width="500" />
+  </a>
+</p>
 
 ## Contributing
 PRs welcome. If adding OS support, please include testing notes and required dependencies.
