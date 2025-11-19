@@ -3,9 +3,7 @@
 Automatically locks your desktop when your phone moves out of Bluetooth range.
 
 <p align="center">
-  <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-proximity-lock-system" target="_blank">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1025039&theme=light&t=1760286232175" alt="Proximity Lock System - Never worry about leaving your computer unlocked again | Product Hunt" width="250" height="54" />
-  </a>
+  <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-proximity&#0045;lock&#0045;system&#0045;2&#0045;0" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1038161&theme=light&period=daily&t=1763270846266" alt="Proximity&#0032;Lock&#0032;System&#0032;2&#0046;0 - Never&#0032;worry&#0032;about&#0032;leaving&#0032;your&#0032;computer&#0032;unlocked&#0032;again&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 </p>
 
 
