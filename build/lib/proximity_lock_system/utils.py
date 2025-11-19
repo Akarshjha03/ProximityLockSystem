@@ -1,18 +1,25 @@
-import platform
-import os
+# proximity_lock_system/utils.py
+import bluetooth
+from typing import List, Tuple
 
-def sleep_system():
-    """Put the system to sleep depending on the OS."""
-    os_name = platform.system().lower()
-
+def discover_nearby_devices(duration: int = 5) -> List[Tuple[str, str]]:
+    """
+    Discover nearby Bluetooth devices.
+    Returns a list of tuples: (mac, name)
+    """
     try:
-        if "windows" in os_name:
-            os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
-        elif "linux" in os_name:
-            os.system("systemctl suspend")
-        elif "darwin" in os_name:  # macOS
-            os.system("pmset sleepnow")
-        else:
-            print("⚠️ Unsupported OS. Cannot suspend.")
+        devices = bluetooth.discover_devices(duration=duration, lookup_names=True)
+        # On some platforms discover_devices(duration, lookup_names=True) returns list of tuples
+        # On others, passing lookup_names=True may return list of tuples; ensure tuple form.
+        normalized = []
+        for item in devices:
+            if isinstance(item, tuple) and len(item) >= 2:
+                mac, name = item[0], item[1] or "Unknown"
+            else:
+                mac = item
+                name = "Unknown"
+            normalized.append((mac, name))
+        return normalized
     except Exception as e:
-        print(f"❌ Failed to put system to sleep: {e}")
+        # If Bluetooth stack not available or error, return empty list
+        return []
