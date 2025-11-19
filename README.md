@@ -7,8 +7,9 @@ Automatically locks your desktop when your phone moves out of Bluetooth range.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-19%20220056.png" width="500" />
+  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-14%20190514.png" width="1000" />
 </p>
+
 
 
 
