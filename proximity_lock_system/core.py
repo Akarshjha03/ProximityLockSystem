@@ -54,6 +54,7 @@ class MonitorThread(threading.Thread):
         self._stop_evt = threading.Event()
         self._paused_until = 0
         self._running = False
+        self.last_seen = 0  # Timestamp of last successful detection
 
     def stop(self):
         self._stop_evt.set()
@@ -86,6 +87,7 @@ class MonitorThread(threading.Thread):
                     self._paused_until = time.time() + self.pause_after_unlock
                     consecutive_misses = 0
             else:
+                self.last_seen = time.time()
                 # reset counter
                 if consecutive_misses > 0:
                     print("\033[32m[+] Device detected again — resetting counter.\033[0m")
@@ -97,3 +99,4 @@ class MonitorThread(threading.Thread):
                     break
                 time.sleep(1)
         self._running = False
+
