@@ -36,6 +36,17 @@ _monitor_lock = threading.Lock()
 
 def print_banner():
     print(BANNER)
+    # Show last device connected (configured device)
+    cfg = load_config()
+    phone_mac = cfg.get("PHONE_MAC")
+    device_name = cfg.get("DEVICE_NAME")
+    
+    if phone_mac:
+        name_display = device_name if device_name else "Unknown Device"
+        print(f"{CYAN}Last Device Connected: {name_display} ({phone_mac}){RESET}")
+    else:
+        print(f"{YELLOW}No device configured. Run 'scan' to find your phone.{RESET}")
+
 
 def cmd_help():
     print(f"""
@@ -134,7 +145,16 @@ def show_status():
     print(f"{CYAN}Status:{RESET}")
     print(f"  Device: {name} ({phone})")
     print(f"  Monitoring: {GREEN if running else YELLOW}{running}{RESET}")
+    
+    if running and _monitor.last_seen > 0:
+        elapsed = time.time() - _monitor.last_seen
+        last_seen_str = time.strftime('%H:%M:%S', time.localtime(_monitor.last_seen))
+        print(f"  Last Seen: {GREEN}{last_seen_str} ({int(elapsed)}s ago){RESET}")
+    elif running:
+        print(f"  Last Seen: {YELLOW}Never (since start){RESET}")
+
     print(f"  Interval: {poll}s  Pause after lock: {pause}s  Safety threshold: {threshold}")
+
 
 def reset_config_command():
     confirm = input("Are you sure you want to reset configuration? (y/n): ").strip().lower()

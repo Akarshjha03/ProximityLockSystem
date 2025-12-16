@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="proximity-lock-system",
-    version="2.0.0",
+    version="2.1.0",
     packages=find_packages(),
     install_requires=[
         "pybluez"
