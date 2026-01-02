@@ -87,7 +87,7 @@ Once selected, it will monitor the device and lock the system when the phone has
 ## System Performance
 
 ### Lock Trigger Latency
-![Latency Graph](assets/latency.png)
+![Latency Graph](latency.png)
 
 The graph shows how quickly the system locks the device as the paired device moves away.
 
