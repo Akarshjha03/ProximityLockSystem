@@ -84,6 +84,14 @@ Once selected, it will monitor the device and lock the system when the phone has
 - macOS: Uses `CGSession -suspend`. If that doesn't work on newer macOS versions, consider running an AppleScript or `osascript` command to lock the screen.
 - Linux: Calls `gnome-screensaver-command -l` (GNOME). If you use another DE, replace the command with one that works for your environment (for example `loginctl lock-session`, `dm-tool lock`, or other `xdg` alternatives).
 
+## System Performance
+
+### Lock Trigger Latency
+![Latency Graph](assets/latency.png)
+
+The graph shows how quickly the system locks the device as the paired device moves away.
+
+
 ## Configuration
 Tweak the constants in `proximity_lock_system/config.py`:
 - `POLL_INTERVAL` — seconds between checks
