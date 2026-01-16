@@ -1,3 +1,6 @@
+<img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_app_logo.png" alt="Proximity App Logo" width="200" />
+
+
 # Proximity Lock System
 
 Automatically locks your desktop when your phone moves out of Bluetooth range.
