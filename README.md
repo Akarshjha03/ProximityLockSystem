@@ -2,6 +2,10 @@
   <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_app_logo.png" alt="Proximity App Logo" width="200" />
 </p>
 
+<p align="center">
+  <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-proximity&#0045;lock&#0045;system&#0045;2&#0045;0" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1038161&theme=light&period=daily&t=1763270846266" alt="Proximity&#0032;Lock&#0032;System&#0032;2&#0046;0 - Never&#0032;worry&#0032;about&#0032;leaving&#0032;your&#0032;computer&#0032;unlocked&#0032;again&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</p>
+
 <h1 align="center">Proximity Lock System</h1>
 
 <p align="center">
@@ -9,10 +13,6 @@
 </p>
 
 ---
-
-<p align="center">
-  <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-proximity&#0045;lock&#0045;system&#0045;2&#0045;0" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1038161&theme=light&period=daily&t=1763270846266" alt="Proximity&#0032;Lock&#0032;System&#0032;2&#0046;0 - Never&#0032;worry&#0032;about&#0032;leaving&#0032;your&#0032;computer&#0032;unlocked&#0032;again&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-14%20190514.png" width="1000" />
