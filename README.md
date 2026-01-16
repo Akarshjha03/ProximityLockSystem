@@ -1,4 +1,6 @@
-<img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_app_logo.png" alt="Proximity App Logo" width="200" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_app_logo.png" alt="Proximity App Logo" width="200" />
+</p>
 
 
 # Proximity Lock System
