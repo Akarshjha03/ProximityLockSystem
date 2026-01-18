@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-14%20190514.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Terminal_Preview_new.png" width="800" />
 </p>
 
 ## ⚠️ IMPORTANT WARNING
