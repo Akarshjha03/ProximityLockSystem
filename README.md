@@ -132,6 +132,18 @@ Tweak the constants in `proximity_lock_system/config.py`:
 - Permission/adapter errors: ensure the OS user has permission to access Bluetooth and that the adapter is enabled.
 - Lock not working on Linux/macOS: the project uses a DE-specific command; update `proximity_lock_system/core.py` to call a command available on your system.
 
+## Star History
+
+⭐ Star this repository and add yourself to the [Stargazers](https://github.com/Akarshjha03/ProximityLockSystem/stargazers)!
+
+<a href="https://www.star-history.com/#Akarshjha03/ProximityLockSystem&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Akarshjha03/ProximityLockSystem&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Akarshjha03/ProximityLockSystem&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Akarshjha03/ProximityLockSystem&type=date&legend=top-left" />
+ </picture>
+</a>
+
 ## Support us by following us on Product Hunt & Peerlist
 <table align="center">
   <tr>
