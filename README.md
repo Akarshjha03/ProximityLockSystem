@@ -132,12 +132,24 @@ Tweak the constants in `proximity_lock_system/config.py`:
 - Permission/adapter errors: ensure the OS user has permission to access Bluetooth and that the adapter is enabled.
 - Lock not working on Linux/macOS: the project uses a DE-specific command; update `proximity_lock_system/core.py` to call a command available on your system.
 
-## Support us by following us on Product Hunt
-<p align="center">
-  <a href="https://www.producthunt.com/products/proximity-lock-system?launch=proximity-lock-system-2-0" target="_blank">
-    <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-19%20220056.png" width="500" />
-  </a>
-</p>
+## Support us by following us on Product Hunt & Peerlist
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://www.producthunt.com/products/proximity-lock-system?launch=proximity-lock-system-2-0">
+        <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Screenshot%202025-11-19%20220056.png" width="450">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://peerlist.io/akarshjha03/project/proximity-lock-system">
+        <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_Peerlist.png" width="450">
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+
 
 ## Contributing
 PRs welcome. If adding OS support, please include testing notes and required dependencies.
