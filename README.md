@@ -2,9 +2,24 @@
   <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_app_logo.png" alt="Proximity App Logo" width="200" />
 </p>
 
-<p align="center">
-  <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-proximity&#0045;lock&#0045;system&#0045;2&#0045;0" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1038161&theme=light&period=daily&t=1763270846266" alt="Proximity&#0032;Lock&#0032;System&#0032;2&#0046;0 - Never&#0032;worry&#0032;about&#0032;leaving&#0032;your&#0032;computer&#0032;unlocked&#0032;again&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://www.producthunt.com/products/proximity-lock-system?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-proximity-lock-system-2-0" target="_blank">
+        <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1038161&theme=light&period=daily" width="250" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://peerlist.io/akarshjha03/project/proximity-lock-system" target="_blank" rel="noreferrer">
+        <img
+          src="https://peerlist.io/api/v1/projects/embed/PRJHEOG9GNEA8RO9GCRKLNP9K9RJN6?showUpvote=false&theme=light"
+          height="72"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 <p align="center">
   <strong>✨ Featured by <a href="https://x.com/tom_doerr/status/2012322364344664373">Tom Dörr</a> (149k+ followers on X)</strong>
