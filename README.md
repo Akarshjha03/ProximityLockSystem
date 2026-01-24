@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_staff_picked.png" alt="Proximity App Logo" width="250" />
+  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Proximity_staff_picked1.png" alt="Proximity App Logo" width="250" />
 </p>
 
 <table align="center">
