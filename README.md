@@ -154,7 +154,7 @@ Tweak the constants in `proximity_lock_system/config.py`:
     </td>
     <td align="center">
       <a href="https://peerlist.io/akarshjha03/project/proximity-lock-system">
-        <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Peerlist-peers.png" width="450">
+        <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/Images/Peerlist_peers1.png" width="400">
       </a>
     </td>
   </tr>
