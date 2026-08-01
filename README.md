@@ -136,13 +136,9 @@ Tweak the constants in `proximity_lock_system/config.py`:
 
 ⭐ Star this repository and add yourself to the [Stargazers](https://github.com/Akarshjha03/ProximityLockSystem/stargazers)!
 
-<a href="https://www.star-history.com/#Akarshjha03/ProximityLockSystem&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Akarshjha03/ProximityLockSystem&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Akarshjha03/ProximityLockSystem&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Akarshjha03/ProximityLockSystem&type=date&legend=top-left" />
- </picture>
-</a>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Akarshjha03/ProximityLockSystem/main/proximity-lock-system.gif" alt="Proximity Lock System Demo" width="900">
+</p>
 
 ## Support us by following us on Product Hunt & Peerlist
 <table align="center">
