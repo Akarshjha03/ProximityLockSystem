@@ -1,0 +1,9 @@
+# requirements.txt — macOS
+# bleak: async BLE library using Apple's CoreBluetooth framework
+# Works in user-space on macOS 10.15+ (Catalina and later).
+# No root required. No external C build tools needed.
+bleak>=0.21.0
+
+# rumps: Ridiculously Uncomplicated macOS Python Statusbar apps
+# Provides the NSStatusBar icon, menus, notifications, and timers.
+rumps>=0.4.0
