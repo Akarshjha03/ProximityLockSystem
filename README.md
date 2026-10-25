@@ -20,7 +20,6 @@
   </tr>
 </table>
 
-
 <p align="center">
   <strong>✨ Featured by <a href="https://x.com/tom_doerr/status/2012322364344664373">Tom Dörr</a> (149k+ followers on X)</strong>
 </p>

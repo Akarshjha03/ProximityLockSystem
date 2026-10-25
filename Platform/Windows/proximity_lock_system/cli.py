@@ -4,7 +4,7 @@ import threading
 import time
 from proximity_lock_system import __version__
 from proximity_lock_system.config import load_config, save_config, reset_config
-from proximity_lock_system.utils import discover_nearby_devices
+from proximity_lock_system.utils import BluetoothScanError, discover_nearby_devices
 from proximity_lock_system.core import MonitorThread
 
 # ANSI color helpers
@@ -55,6 +55,7 @@ def cmd_help():
   {GREEN}set-device <num>{RESET}    - Select device from last scan results
   {GREEN}start{RESET}                - Start background proximity monitoring
   {GREEN}stop{RESET}                 - Stop background monitoring
+  {GREEN}resume{RESET}               - Re-arm after a lock (requires phone detection)
   {GREEN}status{RESET}               - Show monitor status and config
   {GREEN}reset{RESET}                - Reset saved configuration
   {GREEN}help{RESET}                 - Show this help
@@ -69,7 +70,11 @@ def command_scan():
     cfg = load_config()
     duration = cfg.get("SCAN_DURATION", 5)
     print(f"{YELLOW}Scanning for nearby Bluetooth devices ({duration}s)...{RESET}")
-    devices = discover_nearby_devices(duration=duration)
+    try:
+        devices = discover_nearby_devices(duration=duration)
+    except BluetoothScanError as exc:
+        print(f"{RED}Bluetooth scan failed: {exc}{RESET}")
+        return
     _last_scan = devices
     if not devices:
         print(f"{RED}No devices found. Ensure Bluetooth is enabled and your phone is discoverable.{RESET}")
@@ -99,7 +104,7 @@ def command_set_device(tokens):
 def start_monitor():
     global _monitor
     with _monitor_lock:
-        if _monitor and not _monitor.stopped():
+        if _monitor and _monitor.is_alive():
             print(f"{YELLOW}Monitor already running.{RESET}")
             return
         cfg = load_config()
@@ -122,17 +127,24 @@ def start_monitor():
 def stop_monitor():
     global _monitor
     with _monitor_lock:
-        if not _monitor or _monitor.stopped():
+        if not _monitor or not _monitor.is_alive():
             print(f"{YELLOW}Monitor is not running.{RESET}")
             return
         _monitor.stop()
-        # wait a short time for thread to exit
-        for _ in range(10):
-            if _monitor.stopped():
-                break
-            time.sleep(0.2)
-        print(f"{GREEN}Monitor stopped.{RESET}")
-        _monitor = None
+        _monitor.join(timeout=5)
+        if _monitor.is_alive():
+            print(f"{YELLOW}Monitor stop requested; waiting for the current Bluetooth scan to finish.{RESET}")
+        else:
+            print(f"{GREEN}Monitor stopped.{RESET}")
+            _monitor = None
+
+def resume_monitor():
+    if _monitor is None or not _monitor.is_alive():
+        print(f"{YELLOW}Monitor is not running.{RESET}")
+        return
+    ok, message = _monitor.resume()
+    color = GREEN if ok else YELLOW
+    print(f"{color}{message}{RESET}")
 
 def show_status():
     cfg = load_config()
@@ -141,10 +153,13 @@ def show_status():
     poll = cfg.get("POLL_INTERVAL", 10)
     pause = cfg.get("UNLOCK_PAUSE", 180)
     threshold = cfg.get("SAFETY_THRESHOLD", 2)
-    running = _monitor is not None and not _monitor.stopped()
+    running = _monitor is not None and _monitor.is_alive()
     print(f"{CYAN}Status:{RESET}")
     print(f"  Device: {name} ({phone})")
     print(f"  Monitoring: {GREEN if running else YELLOW}{running}{RESET}")
+    if running:
+        armed = _monitor._armed_evt.is_set()
+        print(f"  Locking armed: {GREEN if armed else YELLOW}{armed}{RESET}")
     
     if running and _monitor.last_seen > 0:
         elapsed = time.time() - _monitor.last_seen
@@ -190,6 +205,8 @@ def repl():
             start_monitor()
         elif cmd == "stop":
             stop_monitor()
+        elif cmd == "resume":
+            resume_monitor()
         elif cmd == "status":
             show_status()
         elif cmd == "reset":
